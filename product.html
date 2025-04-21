@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>源品香豆皮工廠</title>
+    <title>產品介紹｜源品香豆皮工廠</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,64 +15,7 @@
 
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
-      <div class="container-fluid container">
-        <!-- Logo & 公司名稱 -->
-        <a class="navbar-brand text-white fw-bold" href="../index.html">
-          <img
-            src="https://fakeimg.pl/50"
-            alt="logo"
-            width="30"
-            height="30"
-            class="d-inline-block align-text-top me-2"
-          />
-          源品香豆皮工廠
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Middle links -->
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarSupportedContent"
-        >
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link m-2 text-center" href="../index.html"
-                >首　　頁</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link m-2 text-center" href="../brand">品牌介紹</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link m-2 text-center" href="../product.html"
-                >產品介紹</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link m-2 text-center" href="../videos">影音專區</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link m-2 text-center" href="../about">關於我們</a>
-            </li>
-          </ul>
-          <div class="d-flex">
-            <a class="nav-link nav-contact m-2 text-center" href="#contact"
-              >聯絡我們</a
-            >
-          </div>
-        </div>
-      </div>
-    </nav>
+    <div id="navbar-placeholder"></div>
 
     <section class="product-banner">
       <h2 class="banner-title mt-5">產品介紹</h2>
@@ -104,48 +47,21 @@
       </div>
     </main>
 
-    <footer class="bg-dark">
-      <div class="container">
-        <div class="row my-5 py-5">
-          <div class="col-sm-12 col-lg-3 my-3">
-            <h5 style="color: #f8f9fa; border-bottom: 2px dotted #cacbcc">
-              品牌資訊
-            </h5>
-          </div>
-          <div class="col-sm-12 col-lg-3 my-3">
-            <h5 style="color: #f8f9fa; border-bottom: 2px dotted #cacbcc">
-              網站地圖
-            </h5>
-          </div>
-          <div class="col-sm-12 col-lg-6 my-3">
-            <h5 style="color: #f8f9fa; border-bottom: 2px dotted #cacbcc">
-              商品分類
-            </h5>
-          </div>
-        </div>
-      </div>
-      <div class="bg-dark text-center" style="color: #f8f9fa">
-        建議您使用 Google Chrome、Microsoft Edge 瀏覽，以達到最佳瀏覽效果<br />Copyright
-        © 2025
-        <a href="https://chuan.life" style="color: #f8f9fa">chuan.life</a> All
-        Rights Reserved.
-      </div>
-    </footer>
+    <!-- footer -->
+    <div id="footer-placeholder"></div>
 
     <!-- JavaScript -->
-    <script>
-      // Change navbar background on scroll
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 10) {
-          navbar.classList.add("navbar-scrolled");
-        } else {
-          navbar.classList.remove("navbar-scrolled");
-        }
-      });
-    </script>
 
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- 讀取 Layout -->
     <script>
+      // 讀取 Layout : navbar
       fetch("/layout/navbar.html")
         .then((res) => res.text())
         .then(
@@ -153,36 +69,13 @@
             (document.getElementById("navbar-placeholder").innerHTML = html)
         );
 
+      // 讀取 Layout : footer
       fetch("/layout/footer.html")
         .then((res) => res.text())
         .then(
           (html) =>
             (document.getElementById("footer-placeholder").innerHTML = html)
         );
-    </script>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-      crossorigin="anonymous"
-    ></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const currentPath = window.location.pathname;
-        const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-
-        navLinks.forEach((link) => {
-          const linkPath = new URL(link.href).pathname;
-
-          // 判斷是否為目前頁面，加入 active 樣式
-          if (currentPath === linkPath) {
-            link.classList.add("active");
-          } else {
-            link.classList.remove("active");
-          }
-        });
-      });
     </script>
   </body>
 </html>

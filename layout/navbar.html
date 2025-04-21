@@ -1,66 +1,89 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
-    <div class="container-fluid container">
-      <!-- Logo & 公司名稱 -->
-      <a class="navbar-brand text-white fw-bold" href="../index.html">
-        <img
-          src="https://fakeimg.pl/50"
-          alt="logo"
-          width="30"
-          height="30"
-          class="d-inline-block align-text-top me-2"
-        />
-        源品香豆皮工廠
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Middle links -->
-      <div
-        class="collapse navbar-collapse justify-content-center"
-        id="navbarSupportedContent"
-      >
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link m-2 text-center" href="../index.html"
-              >首　　頁</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link m-2 text-center" href="../brand.html"
-              >品牌介紹</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link m-2 text-center" href="../product.html"
-              >產品介紹</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link m-2 text-center" href="../videos.html"
-              >影音專區</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link m-2 text-center" href="../about.html"
-              >關於我們</a
-            >
-          </li>
-        </ul>
-        <div class="d-flex">
-          <a
-            class="nav-link nav-contact m-2 text-center"
-            href="../contact.html"
-            >聯絡我們</a
+  <div class="container-fluid container">
+    <!-- Logo & 公司名稱 -->
+    <a class="navbar-brand text-white fw-bold" href="../index.html">
+      <img
+        src="https://fakeimg.pl/50"
+        alt="logo"
+        width="30"
+        height="30"
+        class="d-inline-block align-text-top me-2"
+      />
+      源品香豆皮工廠
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Middle links -->
+    <div
+      class="collapse navbar-collapse justify-content-center"
+      id="navbarSupportedContent"
+    >
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link m-2 text-center" href="../index.html">首　　頁</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link m-2 text-center" href="../brand.html">品牌介紹</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link m-2 text-center" href="../product.html"
+            >產品介紹</a
           >
-        </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link m-2 text-center" href="../videos.html">影音專區</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link m-2 text-center" href="../about.html">關於我們</a>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <a class="nav-link nav-contact m-2 text-center" href="../contact.html"
+          >聯絡我們</a
+        >
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
+
+<!-- JavaScript -->
+
+<!-- 當夜面滾動後，更改 navbar 背景 -->
+<script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 10) {
+      navbar.classList.add("navbar-scrolled");
+    } else {
+      navbar.classList.remove("navbar-scrolled");
+    }
+  });
+</script>
+
+<!-- nav-link 是否 .active -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+    navLinks.forEach((link) => {
+      const linkPath = new URL(link.href).pathname;
+
+      // 判斷是否為目前頁面，加入 active 樣式
+      if (currentPath === linkPath) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  });
+</script>
