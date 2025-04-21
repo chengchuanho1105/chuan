@@ -3,7 +3,7 @@ body {
   font-family: "Noto Sans TC", sans-serif;
 }
 
-/* 一、背景與滾動後樣式 */
+/* Navbar 頁面滾動後 Style */
 .navbar-custom {
   background-color: rgba(50, 51, 52, 0.7);
   transition: background-color 0.3s ease;
@@ -11,11 +11,12 @@ body {
   padding: 0.5rem 1rem;
 }
 
+/* Navbar 頁面滾動後 Style */
 .navbar-scrolled {
   background-color: rgb(50, 51, 52) !important;
 }
 
-/* 二、中間 link 樣式 */
+/* Navbar link 樣式 */
 .navbar-nav .nav-link {
   color: rgb(250, 251, 252);
   padding: 0.5rem 1rem;
@@ -24,13 +25,14 @@ body {
   transition: all 0.3s ease;
 }
 
+/* Navbar link 文字 大小 */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
   color: #00b34a;
   text-decoration: underline;
 }
 
-/* 中間 Link 加斜線分隔符號 */
+/* Navbar Link 加斜線分隔符號 */
 .navbar-nav .nav-item {
   display: flex;
   align-items: center;
@@ -38,7 +40,7 @@ body {
 
 .navbar-nav .nav-item:not(:last-child)::after {
   content: "/";
-  color: rgba(250, 250, 250, 0.4); /* 柔和點綴 */
+  color: rgba(251, 252, 253, 0.5);
   margin: 0 5px;
   font-size: 2rem;
   line-height: 1;
