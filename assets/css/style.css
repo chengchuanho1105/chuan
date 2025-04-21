@@ -3,20 +3,23 @@
   transition: background-color 0.3s;
   background-color: rgba(1, 2, 3, 0.5);
   border-bottom: 1px solid rgba(248, 249, 250, 0.1);
+  box-shadow: 0px 5px 5px rgba(1, 2, 3, 0.5);
 }
 
+/* Navbar Style - 頁面轉動後 */
 .navbar-scrolled {
   background-color: black !important;
   border-color: rgba(248, 249, 250, 0.1);
 }
 
+/* Navbar Line Active */
 .navbar-nav .nav-link.active {
   border: 2px dotted #00b34a;
   color: #010203;
   background-color: rgba(248, 249, 250, 1);
 }
 
-/* 中間連結 */
+/* Navbar Line */
 .navbar-nav .nav-link {
   color: #f8f9fa;
   /*字體顏色*/
@@ -34,7 +37,7 @@
   border-bottom: 2px dotted #f8f9fa;
 }
 
-/* 中間連結:移入效果 */
+/* Navbar Line : hover */
 .navbar-nav .nav-link:hover {
   color: #010203;
   /*字體顏色*/
@@ -43,7 +46,7 @@
   border-bottom: 2px dotted #00b34a;
 }
 
-/* 聯絡我們 */
+/* Navbar Contact */
 .nav-contact {
   color: #f8f9fa;
   /*字體顏色*/
@@ -62,7 +65,7 @@
   border: 2px dotted #00b34a;
 }
 
-/*聯絡我們:移入效果*/
+/* Navbar Contact : hover */
 .nav-contact:hover {
   color: #f8f9fa;
   /*字體顏色*/
@@ -73,38 +76,15 @@
   border-bottom: 2px dotted #f8f9fa;
 }
 
+/* Navbar 手風琴 Button Background */
 .navbar-toggler {
   background-color: rgba(248, 249, 250, 0.5);
 }
 
-/* Hero section */
-.hero {
-  height: 100vh;
-  background-image: url("/assets/media/工廠街景.png");
-  /* 替換為你的圖片路徑 */
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-shadow: 1px 1px 4px rgba(1, 2, 3, 0.7);
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
 /* Banner */
 .banner {
-  height: 30vh;
-  /* 5% 的視窗高度 */
   width: 100vw;
-  /* 100% 的視窗寬度 */
   background-image: url("/assets/media/工廠街景.png");
-  /* 替換為你自己的圖 */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -114,9 +94,21 @@
   text-shadow: 1px 1px 4px rgba(1, 2, 3, 0.7);
 }
 
-/* Banner 文字樣式 */
+/* Banner - 滿版 */
+.banner-full {
+  height: 100vh;
+}
+
+/* Banner - 短版 */
+.banner-short {
+  height: 30vh;
+}
+
+/* Banner Tittle Style */
 .banner-title {
-  font-size: 3rem;
   font-weight: bold;
-  margin: 0;
+  background-color: rgb(01, 02, 03, 0.2);
+  border-radius: 1rem;
+  display: inline-block;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
 }
