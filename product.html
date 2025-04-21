@@ -10,7 +10,7 @@
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
 
   <body>
@@ -54,7 +54,7 @@
               <a class="nav-link m-2 text-center" href="../brand">品牌介紹</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active m-2 text-center" href="../product.html"
+              <a class="nav-link m-2 text-center" href="../product.html"
                 >產品介紹</a
               >
             </li>
@@ -150,5 +150,23 @@
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+        navLinks.forEach((link) => {
+          const linkPath = new URL(link.href).pathname;
+
+          // 判斷是否為目前頁面，加入 active 樣式
+          if (currentPath === linkPath) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
