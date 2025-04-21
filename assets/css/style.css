@@ -136,3 +136,44 @@ body {
   display: inline-block;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* 向下滑動提示 */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #f8f9fa;
+  font-size: 1.5rem;
+  opacity: 0.8;
+  animation: floatDown 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.scroll-indicator .scroll-arrow {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 0rem;
+  animation: bounce 1s infinite;
+}
+
+@keyframes floatDown {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(6px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
