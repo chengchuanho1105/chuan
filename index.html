@@ -158,5 +158,32 @@
             (document.getElementById("footer-placeholder").innerHTML = html)
         );
     </script>
+
+    <!-- nav-link 是否 .active -->
+    <script>
+      // 載入 navbar，並在載入完成後判斷目前頁面加上 .active
+      fetch("/layout/navbar.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("navbar-placeholder").innerHTML = html;
+
+          // 等 navbar 加進 DOM 後，再判斷 active
+          const currentPath = window.location.pathname;
+          const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+          navLinks.forEach((link) => {
+            const linkPath = new URL(link.href).pathname;
+
+            if (
+              currentPath === linkPath ||
+              (currentPath === "/" && linkPath === "/index.html")
+            ) {
+              link.classList.add("active");
+            } else {
+              link.classList.remove("active");
+            }
+          });
+        });
+    </script>
   </body>
 </html>
