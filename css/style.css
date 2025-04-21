@@ -1,0 +1,121 @@
+/* Navbar Style */
+.navbar-custom {
+  transition: background-color 0.3s;
+  background-color: rgba(1, 2, 3, 0.5);
+  border-bottom: 1px solid rgba(248, 249, 250, 0.1);
+}
+
+.navbar-scrolled {
+  background-color: black !important;
+  border-color: rgba(248, 249, 250, 0.1);
+}
+
+.navbar-nav .nav-link.active {
+  border: 2px dotted #00b34a;
+  color: #010203;
+  background-color: rgba(248, 249, 250, 1);
+}
+
+/* 中間連結 */
+.navbar-nav .nav-link {
+  color: #f8f9fa;
+  /*字體顏色*/
+  font-weight: bold;
+  /*字體粗細*/
+  background-color: transparent;
+  /*背景顏色*/
+  padding: 5px 10px;
+  /*內距*/
+  border-radius: 5px;
+  /*邊框-半徑*/
+  transition: all 0.5s ease;
+  /*轉場效果*/
+  border: 2px dotted #f8f9fa;
+}
+
+/* 中間連結:移入效果 */
+.navbar-nav .nav-link:hover {
+  color: #010203;
+  /*字體顏色*/
+  background-color: rgba(248, 249, 250, 0.8);
+  /*背景顏色*/
+  border-bottom: 2px dotted #00b34a;
+}
+
+/* 聯絡我們 */
+.nav-contact {
+  color: #f8f9fa;
+  /*字體顏色*/
+  font-weight: bold;
+  /*字體粗細*/
+  background-color: transparent;
+  /*背景顏色*/
+  padding: 5px 10px;
+  /*內距*/
+  border-radius: 5px;
+  /*邊框-半徑*/
+  transition: all 0.5s ease;
+  /*轉場效果*/
+  display: block;
+  width: 100%;
+  border: 2px dotted #00b34a;
+}
+
+/*聯絡我們:移入效果*/
+.nav-contact:hover {
+  color: #f8f9fa;
+  /*字體顏色*/
+  background-color: rgba(0, 179, 74, 0.8);
+  /*背景顏色*/
+  display: block;
+  width: 100%;
+  border-bottom: 2px dotted #f8f9fa;
+}
+
+.navbar-toggler {
+  background-color: rgba(248, 249, 250, 0.5);
+}
+
+/* Hero section */
+.hero {
+  height: 100vh;
+  background-image: url("https://s0.wp.com/wp-content/themes/pub/margarethe/assets/images/margarethe-img-1-scaled.jpg");
+  /* 替換為你的圖片路徑 */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(1, 2, 3, 0.7);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* 產品介紹 Banner */
+.product-banner {
+  height: 30vh;
+  /* 5% 的視窗高度 */
+  width: 100vw;
+  /* 100% 的視窗寬度 */
+  background-image: url("/img/工廠街景.png");
+  /* 替換為你自己的圖 */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Banner 文字樣式 */
+.banner-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+}
