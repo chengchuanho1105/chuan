@@ -1,3 +1,8 @@
+/* body */
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
 /* Navbar Style */
 .navbar-custom {
   transition: background-color 0.3s;
@@ -8,8 +13,7 @@
 
 /* Navbar Style - 頁面轉動後 */
 .navbar-scrolled {
-  background-color: black !important;
-  border-color: rgba(248, 249, 250, 0.1);
+  background-color: #545556 !important;
 }
 
 /* Navbar Line Active */
@@ -35,6 +39,8 @@
   /*轉場效果*/
   border: none;
   border-bottom: 2px dotted #f8f9fa;
+  display: inline-flex;
+  align-items: center;
 }
 
 /* Navbar Line : hover */
@@ -44,6 +50,15 @@
   background-color: rgba(248, 249, 250, 0.8);
   /*背景顏色*/
   border-bottom: 2px dotted #00b34a;
+}
+
+/* Navbar Item Style */
+.navbar-nav .nav-item:not(:last-child)::after {
+  content: "/";
+  color: rgba(248, 249, 250, 1);
+  margin: 0 0px;
+  transform: rotate(30deg);
+  font-weight: normal;
 }
 
 /* Navbar Contact */
