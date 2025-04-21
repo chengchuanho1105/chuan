@@ -19,15 +19,16 @@
     </script>
   </head>
 
-  <body>
+  <header>
     <!-- Navbar -->
     <div id="navbar-placeholder"></div>
-
     <!-- Hero Section -->
     <section class="hero">
       <h1 class="p-5 m-5">天然‧純粹‧匠心工藝，傳承豆香的美好 YO 12345</h1>
     </section>
+  </header>
 
+  <body>
     <main class="py-1" style="background-color: #f0f0f0">
       <!-- 輪播圖 Section -->
       <section>
@@ -141,49 +142,26 @@
     ></script>
 
     <!-- 讀取 Layout -->
-    <script>
-      // 讀取 Layout : navbar
+    <script type="module">
+      import { initNavbarFeatures } from "/assets/js/navbar.js";
+
+      // 讀取 navbar
       fetch("/layout/navbar.html")
         .then((res) => res.text())
-        .then(
-          (html) =>
-            (document.getElementById("navbar-placeholder").innerHTML = html)
-        );
+        .then((html) => {
+          document.getElementById("navbar-placeholder").innerHTML = html;
 
-      // 讀取 Layout : footer
+          // 確保載入完成後執行功能
+          initNavbarFeatures();
+        });
+
+      // 讀取 footer
       fetch("/layout/footer.html")
         .then((res) => res.text())
         .then(
           (html) =>
             (document.getElementById("footer-placeholder").innerHTML = html)
         );
-    </script>
-
-    <!-- nav-link 是否 .active -->
-    <script>
-      // 載入 navbar，並在載入完成後判斷目前頁面加上 .active
-      fetch("/layout/navbar.html")
-        .then((res) => res.text())
-        .then((html) => {
-          document.getElementById("navbar-placeholder").innerHTML = html;
-
-          // 等 navbar 加進 DOM 後，再判斷 active
-          const currentPath = window.location.pathname;
-          const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-
-          navLinks.forEach((link) => {
-            const linkPath = new URL(link.href).pathname;
-
-            if (
-              currentPath === linkPath ||
-              (currentPath === "/" && linkPath === "/index.html")
-            ) {
-              link.classList.add("active");
-            } else {
-              link.classList.remove("active");
-            }
-          });
-        });
     </script>
   </body>
 </html>
