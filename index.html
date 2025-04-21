@@ -7,21 +7,42 @@
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <title>首頁｜源品香企業行</title>
+
+    <!-- Font: Google Noto Sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Boostrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
+    <!-- Boostrap Icons-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
     />
+
+    <!-- My Custom CSS -->
     <link rel="stylesheet" href="/assets/css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+
+    <!-- Redirect www.chuan.life to chuan.life www -->
+    <script>
+      if (
+        window.location.hostname === "www.chuan.life" &&
+        window.location.protocol.startsWith("http")
+      ) {
+        window.location.href =
+          "https://chuan.life" +
+          window.location.pathname +
+          window.location.search +
+          window.location.hash;
+      }
+    </script>
 
     <!-- SEO -->
     <meta
@@ -57,12 +78,6 @@
           "telephone": "+886-912-345-678",
           "contactType": "Customer Service"
         }
-      }
-    </script>
-
-    <script>
-      if (location.hostname === "www.chuan.life") {
-        location.href = "https://chuan.life";
       }
     </script>
   </head>
