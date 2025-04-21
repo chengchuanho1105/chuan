@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+
+    <style>
+        /* Navbar Style */
+        .navbar-custom {
+            transition: background-color 0.3s;
+            background-color: rgba(1, 2, 3, 0.5);
+            border-bottom: 1px solid rgba(248, 249, 250, 0.1);
+        }
+
+        .navbar-scrolled {
+            background-color: black !important;
+            border-color: rgba(248, 249, 250, 0.1);
+        }
+
+        /* 中間連結 */
+        .navbar-nav .nav-link {
+            color: #F8F9FA;
+            /*字體顏色*/
+            font-weight: bold;
+            /*字體粗細*/
+            background-color: transparent;
+            /*背景顏色*/
+            padding: 5px 10px;
+            /*內距*/
+            border-radius: 5px;
+            /*邊框-半徑*/
+            transition: all 0.5s ease;
+            /*轉場效果*/
+            border-bottom: 3px dotted #F8F9FA;
+        }
+
+        /* 中間連結:移入效果 */
+        .navbar-nav .nav-link:hover {
+            color: #010203;
+            /*字體顏色*/
+            background-color: rgba(248, 249, 250, 0.8);
+            /*背景顏色*/
+            border-bottom: 3px dotted #00b34a;
+        }
+
+        /* 聯絡我們 */
+        .nav-contact {
+            color: #F8F9FA;
+            /*字體顏色*/
+            font-weight: bold;
+            /*字體粗細*/
+            background-color: transparent;
+            /*背景顏色*/
+            padding: 5px 10px;
+            /*內距*/
+            border-radius: 5px;
+            /*邊框-半徑*/
+            transition: all 0.5s ease;
+            /*轉場效果*/
+            display: block;
+            width: 100%;
+            border-bottom: 3px dotted #00b34a;
+        }
+
+        /*聯絡我們:移入效果*/
+        .nav-contact:hover {
+            color: #F8F9FA;
+            /*字體顏色*/
+            background-color: rgba(0, 179, 74, 0.8);
+            /*背景顏色*/
+            display: block;
+            width: 100%;
+            border-bottom: 3px dotted #F8F9FA;
+        }
+
+        .navbar-toggler {
+            background-color: rgba(248, 249, 250, 0.5);
+        }
+
+        /* Hero section */
+        .hero {
+            height: 100vh;
+            background-image: url('https://s0.wp.com/wp-content/themes/pub/margarethe/assets/images/margarethe-img-1-scaled.jpg');
+            /* 替換為你的圖片路徑 */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 1px 1px 4px rgba(1, 2, 3, 0.7);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        /* 產品介紹 Banner */
+        .product-banner {
+            height: 30vh;
+            /* 5% 的視窗高度 */
+            width: 100vw;
+            /* 100% 的視窗寬度 */
+            background-image: url('https://s0.wp.com/wp-content/themes/pub/margarethe/assets/images/margarethe-img-1-scaled.jpg');
+            /* 替換為你自己的圖 */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Banner 文字樣式 */
+        .banner-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
+        <div class="container-fluid container">
+            <!-- Logo & 公司名稱 -->
+            <a class="navbar-brand text-white fw-bold" href="../index.html">
+                <img src="https://fakeimg.pl/50" alt="logo" width="30" height="30"
+                    class="d-inline-block align-text-top me-2">
+                源品香豆皮工廠
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Middle links -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link m-2 text-center" href="#brand">品牌介紹</a></li>
+                    <li class="nav-item"><a class="nav-link m-2 text-center" href="#products">產品介紹</a></li>
+                    <li class="nav-item"><a class="nav-link m-2 text-center" href="#videos">影音專區</a></li>
+                    <li class="nav-item"><a class="nav-link m-2 text-center" href="#about">關於我們</a></li>
+                </ul>
+                <div class="d-flex">
+                    <a class="nav-link nav-contact m-2 text-center" href="#contact">聯絡我們</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="product-banner">
+        <h2 class="banner-title mt-5">產品介紹</h2>
+    </section>
+
+    <main class="py-1" style="background-color: #F0F0F0;">
+
+        <div class="bg-light my-5 py-5">
+            <div class="container bg-light">
+                <h1>hello<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>hello</h1>
+            </div>
+        </div>
+
+        <div class="bg-light my-5 py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-3 my-3">
+                        <h3 style="border-bottom: 3px dotted #010203;">最新消息</h3>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 my-3">
+                        <h3 style="border-bottom: 3px dotted #010203;">熱銷商品</h3>
+                    </div>
+                    <div class="col-sm-12 col-lg-3 my-3">
+                        <h3 style="border-bottom: 3px dotted #010203;">產品認證</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <!-- JavaScript -->
+    <script>
+        // Change navbar background on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 10) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+    </script>
+
+    <footer class="bg-dark">
+        <div class="container">
+            <div class="row my-5 py-5">
+                <div class="col-sm-12 col-lg-3 my-3">
+                    <h5 style="color: #F8F9FA; border-bottom: 2px dotted #CACBCC;">品牌資訊</h5>
+                </div>
+                <div class="col-sm-12 col-lg-3 my-3">
+                    <h5 style="color: #F8F9FA; border-bottom: 2px dotted #CACBCC;">網站地圖</h5>
+                </div>
+                <div class="col-sm-12 col-lg-6 my-3">
+                    <h5 style="color: #F8F9FA; border-bottom: 2px dotted #CACBCC;">商品分類</h5>
+                </div>
+            </div>
+        </div>
+        <div class="bg-dark text-center" style="color: #F8F9FA">
+            建議您使用 Google Chrome、Microsoft Edge 瀏覽，以達到最佳瀏覽效果<br>Copyright © 2025 <a href="https://chuan.life"
+                style="color: #F8F9FA;">chuan.life</a> All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
