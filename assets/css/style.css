@@ -80,7 +80,7 @@
 /* Hero section */
 .hero {
   height: 100vh;
-  background-image: url("/img/工廠街景.png");
+  background-image: url("/assets/media/工廠街景.png");
   /* 替換為你的圖片路徑 */
   background-size: cover;
   background-position: center;
@@ -97,13 +97,13 @@
   font-weight: bold;
 }
 
-/* 產品介紹 Banner */
+/* Banner */
 .product-banner {
   height: 30vh;
   /* 5% 的視窗高度 */
   width: 100vw;
   /* 100% 的視窗寬度 */
-  background-image: url("/img/工廠街景.png");
+  background-image: url("/assets/media/工廠街景.png");
   /* 替換為你自己的圖 */
   background-size: cover;
   background-position: center;
@@ -111,7 +111,7 @@
   align-items: center;
   justify-content: center;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 4px rgba(1, 2, 3, 0.7);
 }
 
 /* Banner 文字樣式 */

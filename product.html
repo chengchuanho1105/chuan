@@ -104,19 +104,6 @@
       </div>
     </main>
 
-    <!-- JavaScript -->
-    <script>
-      // Change navbar background on scroll
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 10) {
-          navbar.classList.add("navbar-scrolled");
-        } else {
-          navbar.classList.remove("navbar-scrolled");
-        }
-      });
-    </script>
-
     <footer class="bg-dark">
       <div class="container">
         <div class="row my-5 py-5">
@@ -144,6 +131,35 @@
         Rights Reserved.
       </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Change navbar background on scroll
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 10) {
+          navbar.classList.add("navbar-scrolled");
+        } else {
+          navbar.classList.remove("navbar-scrolled");
+        }
+      });
+    </script>
+
+    <script>
+      fetch("/layout/navbar.html")
+        .then((res) => res.text())
+        .then(
+          (html) =>
+            (document.getElementById("navbar-placeholder").innerHTML = html)
+        );
+
+      fetch("/layout/footer.html")
+        .then((res) => res.text())
+        .then(
+          (html) =>
+            (document.getElementById("footer-placeholder").innerHTML = html)
+        );
+    </script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
