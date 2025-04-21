@@ -1,99 +1,106 @@
 /* body */
 body {
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
-/* Navbar Style */
+/* 一、背景與滾動後樣式 */
 .navbar-custom {
-  transition: background-color 0.3s;
-  background-color: rgba(1, 2, 3, 0.5);
-  border-bottom: 1px solid rgba(248, 249, 250, 0.1);
-  box-shadow: 0px 5px 5px rgba(1, 2, 3, 0.5);
+  background-color: rgba(50, 51, 52, 0.7);
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 1rem;
 }
 
-/* Navbar Style - 頁面轉動後 */
 .navbar-scrolled {
-  background-color: #545556 !important;
+  background-color: rgb(50, 51, 52) !important;
 }
 
-/* Navbar Line Active */
-.navbar-nav .nav-link.active {
-  border: 2px dotted #00b34a;
-  color: #010203;
-  background-color: rgba(248, 249, 250, 1);
-}
-
-/* Navbar Line */
+/* 二、中間 link 樣式 */
 .navbar-nav .nav-link {
-  color: #f8f9fa;
-  /*字體顏色*/
-  font-weight: bold;
-  /*字體粗細*/
-  background-color: transparent;
-  /*背景顏色*/
-  padding: 5px 10px;
-  /*內距*/
-  border-radius: 5px;
-  /*邊框-半徑*/
-  transition: all 0.5s ease;
-  /*轉場效果*/
-  border: none;
-  border-bottom: 2px dotted #f8f9fa;
-  display: inline-flex;
+  color: rgb(250, 251, 252);
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #00b34a;
+  text-decoration: underline;
+}
+
+/* 中間 Link 加斜線分隔符號 */
+.navbar-nav .nav-item {
+  display: flex;
   align-items: center;
 }
 
-/* Navbar Line : hover */
-.navbar-nav .nav-link:hover {
-  color: #010203;
-  /*字體顏色*/
-  background-color: rgba(248, 249, 250, 0.8);
-  /*背景顏色*/
-  border-bottom: 2px dotted #00b34a;
-}
-
-/* Navbar Item Style */
 .navbar-nav .nav-item:not(:last-child)::after {
   content: "/";
-  color: rgba(248, 249, 250, 1);
-  margin: 0 0px;
-  transform: rotate(30deg);
-  font-weight: normal;
+  color: rgba(250, 250, 250, 0.4); /* 柔和點綴 */
+  margin: 0 5px;
+  font-size: 2rem;
+  line-height: 1;
+  display: inline-block;
+  transform: rotate(15deg);
+  pointer-events: none;
 }
 
-/* Navbar Contact */
+/* 小螢幕時隱藏斜線 */
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-item:not(:last-child)::after {
+    display: none !important;
+  }
+}
+
+/* 三、聯絡我們按鈕 */
 .nav-contact {
-  color: #f8f9fa;
-  /*字體顏色*/
-  font-weight: bold;
-  /*字體粗細*/
-  background-color: transparent;
-  /*背景顏色*/
-  padding: 5px 10px;
-  /*內距*/
+  color: #ff4d4d;
+  border: 2px solid #ff4d4d;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
-  /*邊框-半徑*/
-  transition: all 0.5s ease;
-  /*轉場效果*/
-  display: block;
-  width: 100%;
-  border: 2px dotted #00b34a;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  font-weight: 500;
+  background-color: rgb(250, 251, 252, 0.8);
 }
 
-/* Navbar Contact : hover */
 .nav-contact:hover {
-  color: #f8f9fa;
-  /*字體顏色*/
-  background-color: rgba(0, 179, 74, 0.8);
-  /*背景顏色*/
-  display: block;
-  width: 100%;
-  border-bottom: 2px dotted #f8f9fa;
+  color: #00b34a;
+  background-color: rgba(0, 179, 74, 0.1);
+  border-color: #00b34a;
+  background-color: rgb(250, 251, 252, 0.8);
 }
 
-/* Navbar 手風琴 Button Background */
 .navbar-toggler {
-  background-color: rgba(248, 249, 250, 0.5);
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* 響應式：小螢幕調整 */
+@media (max-width: 991.98px) {
+  .nav-contact {
+    width: 100%;
+    margin: 0.5rem auto;
+  }
+
+  .navbar-nav .nav-link {
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem auto;
+  }
+
+  .ms-lg-3.mt-3 {
+    margin-top: 0 !important;
+  }
 }
 
 /* Banner */
