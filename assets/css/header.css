@@ -75,7 +75,7 @@
 .navbar-nav .nav-link:hover::after,
 .navbar-nav .nav-link:focus::after,
 .navbar-nav .nav-link.active::after {
-  width: 100%; /* 下劃線寬度 (可以調整為 100% 或其他) */
+  width: 90%; /* 下劃線寬度 (可以調整為 100% 或其他) */
   visibility: visible; /* 顯示 */
 }
 
@@ -126,7 +126,7 @@
 
   .navbar-nav .nav-link {
     display: inline-block; /* 讓連結可以在置中後正常顯示下劃線 */
-    padding: 0.8rem 1rem; /* 增加觸控區域 */
+    padding: 0.2rem 2rem; /* 增加觸控區域 */
   }
 }
 
