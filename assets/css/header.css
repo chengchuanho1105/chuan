@@ -32,7 +32,12 @@
   display: block;
   width: 1px; /* 設置線條寬度 */
   height: 35px; /* 設置線條高度 */
-  background: linear-gradient(45deg, #d4af37, #f0c36d, #f8e1a1); /* 設置線條顏色 */
+  background: linear-gradient(
+    45deg,
+    #d4af37,
+    #f0c36d,
+    #f8e1a1
+  ); /* 設置線條顏色 */
   transform: rotate(20deg); /* 旋轉成斜線的角度 */
   margin: 0 10px; /* 設置斜線的左右間距 */
 }
@@ -115,8 +120,8 @@
     margin-bottom: 0.5rem; /* 項目間增加下邊距 */
   }
 
-  .navbar-nav .nav-link::after {
-    content: "/";
+  .navbar-nav .nav-item + .nav-item::before {
+    display: none;
   }
 
   .navbar-nav .nav-link {
@@ -129,7 +134,6 @@
 body {
   padding-top: 80px; /* 這個值可能需要根據你的 navbar 高度微調 */
 }
-
 
 /* 簡約風格：背景圖片 + 居中標題 + 分隔線 */
 .banner {
@@ -154,19 +158,19 @@ body {
 /* 分隔線 */
 .separator {
   position: absolute;
-  bottom: 20px;  /* 位置在下方 */
+  bottom: 20px; /* 位置在下方 */
   width: 50px;
   height: 3px;
-  background-color: #d4af37;  /* 奢華金色 */
+  background-color: #d4af37; /* 奢華金色 */
   z-index: 1;
 }
 
 /* 首頁 Banner */
 .banner-homepage {
-  background-image: url('/assets/media/工廠街景.png'); /* 替換成你的背景圖 */
+  background-image: url("/assets/media/工廠街景.png"); /* 替換成你的背景圖 */
   background-size: cover;
   background-position: center;
-  height: calc(100vh - 78px);  /* 視窗高度 */
+  height: calc(100vh - 78px); /* 視窗高度 */
   position: relative; /* 使 separator 可以絕對定位 */
   display: flex;
   justify-content: center;
@@ -177,10 +181,10 @@ body {
 /* 分隔線 */
 .banner-homepage .separator {
   position: absolute;
-  bottom: 0;  /* 設置底部對齊 */
+  bottom: 0; /* 設置底部對齊 */
   left: 0;
-  width: 100%;  /* 讓分隔線寬度佔滿螢幕 */
-  height: 5px;  /* 設置分隔線高度 */
+  width: 100%; /* 讓分隔線寬度佔滿螢幕 */
+  height: 5px; /* 設置分隔線高度 */
   background-color: #d4af37;
   z-index: 1;
 }
@@ -188,49 +192,48 @@ body {
 /* 向下滑動提示 */
 .scroll-down {
   position: absolute;
-  bottom: 5%;  /* 靠近下方，稍微偏中 */
+  bottom: 5%; /* 靠近下方，稍微偏中 */
   font-size: 2rem;
   font-weight: bold;
   color: #fafbfc;
   text-transform: uppercase;
   letter-spacing: 1px;
-  animation: bounce 1.5s infinite;  /* 設置動畫 */
+  animation: bounce 1.5s infinite; /* 設置動畫 */
   z-index: 2;
 }
 
 .scroll-down .scroll-icon {
   display: block;
   font-size: 1rem;
-  color: #fafbfc;  /* 使用奢華金色 */
-  animation: bounce 1.5s infinite;  /* 設置上下跳動動畫 */
+  color: #fafbfc; /* 使用奢華金色 */
+  animation: bounce 1.5s infinite; /* 設置上下跳動動畫 */
 }
 
 /* 動畫效果：上下跳動的效果 */
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(10px);  /* 調整上下跳動的高度 */
+    transform: translateY(10px); /* 調整上下跳動的高度 */
   }
 }
 
 /* 其他頁面 Banner */
 .banner-otherpage {
-  background-image: url('/assets/media/工廠街景.png'); /* 替換成你的背景圖 */
+  background-image: url("/assets/media/工廠街景.png"); /* 替換成你的背景圖 */
   background-size: 100dvw 30dvh;
   background-position: center;
   height: 30dvh;
   position: relative; /* 使 separator 可以絕對定位 */
 }
 
-
 .banner-otherpage .separator {
   position: absolute;
-  bottom: 0;  /* 設置底部對齊 */
+  bottom: 0; /* 設置底部對齊 */
   left: 0;
-  width: 100%;  /* 讓分隔線寬度佔滿螢幕 */
-  height: 5px;  /* 設置分隔線高度 */
+  width: 100%; /* 讓分隔線寬度佔滿螢幕 */
+  height: 5px; /* 設置分隔線高度 */
   background-color: #d4af37;
 }
-
