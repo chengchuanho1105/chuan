@@ -2,11 +2,37 @@
 body {
   font-family: "Noto Sans TC", sans-serif;
   padding-top: 78px; /* 避免被navbar遮擋 */
-  background: #EAEBEC;
+  --color: #e1e1e1;
+  background-color: #f3f3f3;
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    );
+  background-size: 55px 55px;
 }
 
 /* 分隔線 */
-.separator{
+.separator {
   position: absolute; /* 絕對定位分隔線於底部 */
   bottom: 0; /* 設置底部對齊 */
   left: 0; /* 分隔線從左邊0開始 */
