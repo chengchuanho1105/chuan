@@ -192,7 +192,7 @@ body {
 /* 向下滑動提示 */
 .scroll-down {
   position: absolute;
-  bottom: 5%; /* 靠近下方，稍微偏中 */
+  bottom: 10%; /* 靠近下方，稍微偏中 */
   font-size: 2rem;
   font-weight: bold;
   color: #fafbfc;
