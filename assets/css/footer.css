@@ -1,0 +1,139 @@
+.footer-idcard {
+  width: 17em;
+  height: 22.5em;
+  background: #fafbfc;
+  transition: 1s ease-in-out;
+  clip-path: polygon(
+    30px 0%,
+    100% 0,
+    100% calc(100% - 30px),
+    calc(100% - 30px) 100%,
+    0 100%,
+    0% 30px
+  );
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-idcard .img {
+  width: 100px;
+  height: 100px;
+  margin: 30px auto 0 auto;
+}
+
+.footer-idcard .name-zh {
+  color: #1a1b1c;
+  text-align: center;
+  display: block;
+}
+
+.footer-idcard .name-en {
+  color: #1a1b1c;
+  text-align: center;
+  font-size: 0.6rem;
+  display: block;
+}
+
+.footer-idcard hr {
+  border: none;
+  height: 3px;
+  background: linear-gradient(0.25turn, #217da5, #82a865, #ff9c32);
+  width: 95%;
+  margin: 0 auto 0 auto;
+}
+
+.footer-idcard .info {
+  font-weight: 400;
+  color: #515253;
+  display: block;
+  text-align: center;
+  font-size: 0.8em;
+  margin: 0 auto 0 auto;
+}
+
+.footer-idcard .share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.footer-idcard a {
+  color: #515253;
+  transition: 0.4s ease-in-out;
+}
+
+.footer-idcard a:hover {
+  color: #fa0203;
+}
+
+.footer-idcard button {
+  padding: 0.8em 1.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  background: #515253;
+  color: #fafbfc;
+  transition: 0.4s ease-in-out;
+}
+
+.footer-idcard button:hover {
+  background: #fa0203;
+  color: #fafbfc;
+  cursor: pointer;
+}
+
+.footer-idcard .social-card {
+  background: #fafbfc;
+  display: flex;
+  justify-content: center;
+  margin: 20px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+  box-shadow: 0px 0px 20px rgb(51, 52, 53, 0.5);
+}
+
+.footer-idcard .social-container {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  margin: 0px 5px 0px 5px;
+}
+
+.footer-idcard .social-container:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+}
+
+.social-container:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.social-container i {
+    fill: rgb(255, 255, 255);
+  }
+
+.social-container:hover i {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

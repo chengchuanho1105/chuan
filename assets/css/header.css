@@ -192,10 +192,20 @@ banner
 
 /* 標題樣式 */
 .banner h1 {
-  position: absolute; /* 絕對定位*/
-  top: 25%; /* 設置 向下瀏覽 在 Banner 底部稍微上方 */
-  color: #ffffff; /* 文字顏色設為白色 */
+  color: #ffffff; /* 文字顏色 */
   letter-spacing: 1rem; /* 調整字間距 */
   z-index: 1; /* 設定顯示在最上層 */
-  margin: 100px 100px 100px 100px;
+}
+
+/* 文字樣式 */
+.banner p {
+  color: #ffffff; /* 文字顏色 */
+  letter-spacing: 0.5rem; /* 調整字間距 */
+  z-index: 1; /* 設定顯示在最上層 */
+  margin: 0px 100px 0px 100px;
+}
+
+.banner hr {
+  color: #000; /* 分隔線顏色 */
+  z-index: 1; /* 設定顯示在最上層 */
 }
