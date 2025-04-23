@@ -132,84 +132,51 @@
 
 /* 確保內容不被 fixed-top 的 navbar 遮擋 */
 body {
-  padding-top: 80px; /* 這個值可能需要根據你的 navbar 高度微調 */
+  padding-top: 78px; /* 這個值可能需要根據你的 navbar 高度微調 */
 }
 
-/* 簡約風格：背景圖片 + 居中標題 + 分隔線 */
+/* ====================
+banner
+==================== */
 .banner {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  overflow: hidden;
-}
-
-.banner h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin: 0;
-  z-index: 1;
-}
-
-/* 分隔線 */
-.separator {
-  position: absolute;
-  bottom: 20px; /* 位置在下方 */
-  width: 50px;
-  height: 3px;
-  background-color: #d4af37; /* 奢華金色 */
-  z-index: 1;
+  position: relative; /* 設置相對定位以便分隔線可以絕對定位 */
+  display: flex; /* 使用 Flexbox */
+  overflow: hidden; /* 隱藏溢出的內容 */
+  position: relative; /* 設定相對定位使分隔線可以絕對定位 */
+  justify-content: center; /* 對齊主軸線中央 */
+  align-items: center; /* 對齊交錯軸線中央 */
+  flex-direction: column; /* 排版方向為縱向，使標題位於分隔線上方 */
 }
 
 /* 首頁 Banner */
 .banner-homepage {
-  background-image: url("/assets/media/工廠街景.png"); /* 替換成你的背景圖 */
-  background-size: cover;
-  background-position: center;
-  height: calc(100vh - 78px); /* 視窗高度 */
-  position: relative; /* 使 separator 可以絕對定位 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  background-image: url("/assets/media/工廠街景.png"); /* 背景圖片 */
+  background-size: cover; /* 背景圖片大小 */
+  background-position: center; /* 背景圖片置中顯示 */
+  height: calc(100vh - 78px); /* 設定 Banner 高度為視窗高度減去Navbar高度 */
 }
 
-/* 分隔線 */
-.banner-homepage .separator {
-  position: absolute;
-  bottom: 0; /* 設置底部對齊 */
-  left: 0;
-  width: 100%; /* 讓分隔線寬度佔滿螢幕 */
-  height: 5px; /* 設置分隔線高度 */
-  background-color: #d4af37;
-  z-index: 1;
-}
-
-/* 向下滑動提示 */
+/* 向下瀏覽提示 */
 .scroll-down {
-  position: absolute;
-  bottom: 10%; /* 靠近下方，稍微偏中 */
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fafbfc;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  animation: bounce 1.5s infinite; /* 設置動畫 */
-  z-index: 2;
+  position: absolute; /* 絕對定位， */
+  bottom: 15%; /* 設置 向下瀏覽 在 Banner 底部稍微上方 */
+  font-size: 1.2rem; /* 設定文字大小 */
+  text-align: center; /* 設定文字水平置中 */
+  color: #fafbfc; /* 設定文字顏色 */
+  letter-spacing: 5px; /* 設定文字間距 */
+  animation: bounce 1.5s infinite; /* 上下跳動的動畫效果 */
+  z-index: 2; /* 確保向下提示顯示在標題與分隔線上方 */
 }
 
+/* 向下瀏覽提示的圖示 */
 .scroll-down .scroll-icon {
   display: block;
-  font-size: 1rem;
-  color: #fafbfc; /* 使用奢華金色 */
+  font-size: 1.2rem; /* 設定圖示大小 */
+  color: #fafbfc; /* 設定圖示顏色 */
   animation: bounce 1.5s infinite; /* 設置上下跳動動畫 */
 }
 
-/* 動畫效果：上下跳動的效果 */
+/* 動畫效果：上下跳動 */
 @keyframes bounce {
   0%,
   100% {
@@ -220,20 +187,31 @@ body {
   }
 }
 
-/* 其他頁面 Banner */
-.banner-otherpage {
-  background-image: url("/assets/media/工廠街景.png"); /* 替換成你的背景圖 */
-  background-size: 100dvw 30dvh;
-  background-position: center;
-  height: 30dvh;
-  position: relative; /* 使 separator 可以絕對定位 */
+/* 分隔線 */
+.banner-homepage .separator,
+.banner-otherpage .separator{
+  position: absolute; /* 絕對定位分隔線於底部 */
+  bottom: 0; /* 設置底部對齊 */
+  left: 0; /* 分隔線從左邊0開始 */
+  width: 100%; /* 分隔寬度為100% */
+  height: 5px; /* 分隔線高度 */
+  background-color: #d4af37; /* 分隔線顏色 */
+  z-index: 1; /* 確保分隔線顯示在最上層 */
 }
 
-.banner-otherpage .separator {
-  position: absolute;
-  bottom: 0; /* 設置底部對齊 */
-  left: 0;
-  width: 100%; /* 讓分隔線寬度佔滿螢幕 */
-  height: 5px; /* 設置分隔線高度 */
-  background-color: #d4af37;
+/* 其他頁面 Banner */
+.banner-otherpage {
+  background-image: url("/assets/media/工廠街景.png"); /* 背景圖片 */
+  background-size: 100dvw 30dvh; /* 背景圖片大小 */
+  background-position: center; /* 背景圖片置中顯示 */  
+  height: 30dvh;/* Banner 高度 */
+}
+
+/* 標題樣式 */
+.banner h1 {
+  position: absolute; /* 絕對定位*/
+  top: 25%; /* 設置 向下瀏覽 在 Banner 底部稍微上方 */
+  color: #ffffff; /* 文字顏色設為白色 */
+  letter-spacing: 1rem; /* 調整字間距 */
+  z-index: 1; /* 設定顯示在最上層 */
 }
