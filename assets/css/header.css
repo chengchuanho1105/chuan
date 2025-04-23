@@ -130,11 +130,6 @@
   }
 }
 
-/* 確保內容不被 fixed-top 的 navbar 遮擋 */
-body {
-  padding-top: 78px; /* 這個值可能需要根據你的 navbar 高度微調 */
-}
-
 /* ====================
 banner
 ==================== */
@@ -187,24 +182,12 @@ banner
   }
 }
 
-/* 分隔線 */
-.banner-homepage .separator,
-.banner-otherpage .separator{
-  position: absolute; /* 絕對定位分隔線於底部 */
-  bottom: 0; /* 設置底部對齊 */
-  left: 0; /* 分隔線從左邊0開始 */
-  width: 100%; /* 分隔寬度為100% */
-  height: 5px; /* 分隔線高度 */
-  background-color: #d4af37; /* 分隔線顏色 */
-  z-index: 1; /* 確保分隔線顯示在最上層 */
-}
-
 /* 其他頁面 Banner */
 .banner-otherpage {
   background-image: url("/assets/media/工廠街景.png"); /* 背景圖片 */
   background-size: 100dvw 30dvh; /* 背景圖片大小 */
-  background-position: center; /* 背景圖片置中顯示 */  
-  height: 30dvh;/* Banner 高度 */
+  background-position: center; /* 背景圖片置中顯示 */
+  height: 30dvh; /* Banner 高度 */
 }
 
 /* 標題樣式 */
@@ -214,4 +197,5 @@ banner
   color: #ffffff; /* 文字顏色設為白色 */
   letter-spacing: 1rem; /* 調整字間距 */
   z-index: 1; /* 設定顯示在最上層 */
+  margin: 100px 100px 100px 100px;
 }
