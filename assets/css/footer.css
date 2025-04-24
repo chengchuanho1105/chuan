@@ -26,13 +26,14 @@
 .footer-idcard .name-zh {
   color: #1a1b1c;
   text-align: center;
+  font-size: 14pt;
   display: block;
 }
 
 .footer-idcard .name-en {
   color: #1a1b1c;
   text-align: center;
-  font-size: 0.6rem;
+  font-size: 10pt;
   display: block;
 }
 
@@ -40,7 +41,7 @@
   border: none;
   height: 3px;
   background: linear-gradient(0.25turn, #217da5, #82a865, #ff9c32);
-  width: 95%;
+  width: 100%;
   margin: 0 auto 0 auto;
 }
 
@@ -49,7 +50,7 @@
   color: #515253;
   display: block;
   text-align: center;
-  font-size: 0.8em;
+  font-size: 12pt;
   margin: 0 auto 0 auto;
 }
 

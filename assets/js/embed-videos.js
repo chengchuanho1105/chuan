@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const container = document.getElementById("media-container");
 
-  Papa.parse("/media/video-list.csv", {
+  Papa.parse("/assets/media/video-list.csv", {
     download: true,
     header: true,
     complete: function (results) {
@@ -9,10 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const videoId = extractYouTubeId(item.URL);
         if (!videoId) return;
 
-        const card = document.createElement("div");
-        card.classList.add("mediaCard", "my-2");
+        // 1. 建立外層 col
+        const wrapper = document.createElement("div");
+        wrapper.classList.add("col-sm-12", "col-lg-6", "col-xl-4", "my-2", "p-1");
 
-        card.innerHTML = `
+        // 2. 影片卡片 HTML
+        wrapper.innerHTML = `
+          <div class="mediaCard">
             <div class="imgContainer">
               <iframe
                 width="100%"
@@ -25,9 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <p class="title">${item.TITLE}</p>
             <p class="des">${item.DES}</p>
-          `;
+          </div>
+        `;
 
-        container.appendChild(card);
+        // 3. 加到 .row（也就是 media-container）
+        container.appendChild(wrapper);
       });
     },
   });
