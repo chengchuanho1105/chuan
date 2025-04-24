@@ -149,6 +149,7 @@ banner
   background-size: cover; /* 背景圖片大小 */
   background-position: center; /* 背景圖片置中顯示 */
   height: calc(100vh - 78px); /* 設定 Banner 高度為視窗高度減去Navbar高度 */
+  display: none;
 }
 
 /* 向下瀏覽提示 */
@@ -188,6 +189,7 @@ banner
   background-size: 100dvw 30dvh; /* 背景圖片大小 */
   background-position: center; /* 背景圖片置中顯示 */
   height: 30dvh; /* Banner 高度 */
+  display: none;
 }
 
 /* 標題樣式 */

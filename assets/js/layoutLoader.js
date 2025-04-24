@@ -49,6 +49,7 @@ function setupHeaderBehavior() {
   const currentPath = window.location.pathname;
   const navLinks = document.querySelectorAll(".nav-link");
 
+  // 設定 nav active 樣式
   navLinks.forEach((link) => {
     const linkPath = link.getAttribute("href");
     if (linkPath === currentPath) {
@@ -59,6 +60,8 @@ function setupHeaderBehavior() {
   });
 
   const body = document.body;
+  const isHomepage = currentPath === "/" || currentPath.endsWith("/index.html");
+
   if (
     window.location.pathname === "/index.html" ||
     window.location.pathname === "/"
@@ -66,5 +69,19 @@ function setupHeaderBehavior() {
     body.classList.add("homepage");
   } else {
     body.classList.add("otherpage");
+  }
+
+  // 根據當前頁面顯示對應 banner
+  const homepageBanner = document.querySelector(".banner-homepage");
+  const otherpageBanner = document.querySelector(".banner-otherpage");
+
+  if (homepageBanner && otherpageBanner) {
+    if (isHomepage) {
+      homepageBanner.style.display = "block";
+      otherpageBanner.style.display = "none";
+    } else {
+      homepageBanner.style.display = "none";
+      otherpageBanner.style.display = "block";
+    }
   }
 }
