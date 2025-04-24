@@ -66,12 +66,20 @@ function setupHeaderBehavior() {
   const body = document.body;
   const isHomepage = currentPath === "/" || currentPath.endsWith("/index.html");
 
-  if (
-    window.location.pathname === "/index.html" ||
-    window.location.pathname === "/"
-  ) {
+  // 判斷是首頁還是其他頁面，並設定對應的 body 類別
+  if (isHomepage) {
     body.classList.add("homepage");
+    body.classList.remove("otherpage");
+
+    // 顯示首頁 Banner，隱藏其他頁面 Banner
+    document.querySelector('.banner-homepage').style.display = 'flex';
+    document.querySelector('.banner-otherpage').style.display = 'none';
   } else {
     body.classList.add("otherpage");
+    body.classList.remove("homepage");
+
+    // 顯示其他頁面 Banner，隱藏首頁 Banner
+    document.querySelector('.banner-homepage').style.display = 'none';
+    document.querySelector('.banner-otherpage').style.display = 'flex';
   }
 }
