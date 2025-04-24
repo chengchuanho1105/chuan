@@ -52,7 +52,11 @@ function setupHeaderBehavior() {
   // 設定 nav active 樣式
   navLinks.forEach((link) => {
     const linkPath = link.getAttribute("href");
-    if (linkPath === currentPath) {
+    // 標準化 index.html
+    const normalizedCurrentPath =
+      currentPath === "/" ? "/index.html" : currentPath;
+
+    if (linkPath === normalizedCurrentPath) {
       link.classList.add("active");
     } else {
       link.classList.remove("active");
@@ -69,19 +73,5 @@ function setupHeaderBehavior() {
     body.classList.add("homepage");
   } else {
     body.classList.add("otherpage");
-  }
-
-  // 根據當前頁面顯示對應 banner
-  const homepageBanner = document.querySelector(".banner-homepage");
-  const otherpageBanner = document.querySelector(".banner-otherpage");
-
-  if (homepageBanner && otherpageBanner) {
-    if (isHomepage) {
-      homepageBanner.style.display = "block";
-      otherpageBanner.style.display = "none";
-    } else {
-      homepageBanner.style.display = "none";
-      otherpageBanner.style.display = "block";
-    }
   }
 }

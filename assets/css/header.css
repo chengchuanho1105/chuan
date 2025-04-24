@@ -137,19 +137,17 @@ banner
   position: relative; /* 設置相對定位以便分隔線可以絕對定位 */
   display: flex; /* 使用 Flexbox */
   overflow: hidden; /* 隱藏溢出的內容 */
-  position: relative; /* 設定相對定位使分隔線可以絕對定位 */
   justify-content: center; /* 對齊主軸線中央 */
   align-items: center; /* 對齊交錯軸線中央 */
   flex-direction: column; /* 排版方向為縱向，使標題位於分隔線上方 */
+  background-image: url("/assets/media/工廠街景.png"); /* 背景圖片 */
+  background-position: center; /* 背景圖片置中顯示 */
 }
 
 /* 首頁 Banner */
 .banner-homepage {
-  background-image: url("/assets/media/工廠街景.png"); /* 背景圖片 */
   background-size: cover; /* 背景圖片大小 */
-  background-position: center; /* 背景圖片置中顯示 */
   height: calc(100vh - 78px); /* 設定 Banner 高度為視窗高度減去Navbar高度 */
-  display: none;
 }
 
 /* 向下瀏覽提示 */
@@ -185,11 +183,9 @@ banner
 
 /* 其他頁面 Banner */
 .banner-otherpage {
-  background-image: url("/assets/media/工廠街景.png"); /* 背景圖片 */
   background-size: 100dvw 30dvh; /* 背景圖片大小 */
-  background-position: center; /* 背景圖片置中顯示 */
   height: 30dvh; /* Banner 高度 */
-  display: none;
+  justify-items: center;
 }
 
 /* 標題樣式 */
@@ -204,7 +200,6 @@ banner
   color: #ffffff; /* 文字顏色 */
   letter-spacing: 0.5rem; /* 調整字間距 */
   z-index: 1; /* 設定顯示在最上層 */
-  margin: 0px 100px 0px 100px;
 }
 
 .banner hr {
