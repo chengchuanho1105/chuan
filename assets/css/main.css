@@ -31,17 +31,6 @@ body {
   background-size: 55px 55px;
 }
 
-/* 分隔線 */
-.separator {
-  position: absolute; /* 絕對定位分隔線於底部 */
-  bottom: 0; /* 設置底部對齊 */
-  left: 0; /* 分隔線從左邊0開始 */
-  width: 100%; /* 分隔寬度為100% */
-  height: 5px; /* 分隔線高度 */
-  background-color: #d4af37; /* 分隔線顏色 */
-  z-index: 1; /* 確保分隔線顯示在最上層 */
-}
-
 /* mediaCard */
 
 .mediaCard {
