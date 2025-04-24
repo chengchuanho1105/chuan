@@ -1,7 +1,7 @@
 /* 字體設定：全站使用 Noto Sans TC 300 */
 body {
   font-family: "Noto Sans TC", sans-serif;
-  padding-top: 78px; /* 避免被navbar遮擋 */
+  padding-top: 0px; /* 避免被navbar遮擋 */
   --color: #e1e1e1;
   background-color: #f3f3f3;
   background-image: linear-gradient(

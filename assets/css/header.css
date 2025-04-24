@@ -1,17 +1,21 @@
 .custom-navbar {
   padding-top: 1rem; /* 上下內邊距 */
   padding-bottom: 1rem;
-  box-shadow: 0 2px 4px rgba(50, 51, 52, 0.1); /* 添加細微陰影 */
-  /* 如果不喜歡陰影，可以改用底部邊框 */
-  /* border-bottom: 1px solid #eee; */
   transition: background-color 0.3s ease; /* 背景色過渡效果 (可選) */
+  background: linear-gradient(to bottom, rgb(251, 252, 253, 0.6), rgb(251, 252, 253, 0));
+  transition: background-color 0.5s ease, backdrop-filter 0.5s ease;
+}
+
+.custom-navbar.scrolled {
+  background: rgba(251, 252, 253, 0.5); /* 毛玻璃背景顏色 */
+  backdrop-filter: blur(5px); /* 毛玻璃效果 */
 }
 
 /* Navbar Brand (Logo/名稱) */
 .navbar-brand {
   font-weight: bold;
   font-size: 1.5rem; /* 稍大字體 */
-  color: #333;
+  color: #515253;
 }
 
 .navbar-nav {
@@ -31,20 +35,16 @@
   content: "";
   display: block;
   width: 1px; /* 設置線條寬度 */
-  height: 35px; /* 設置線條高度 */
-  background: linear-gradient(
-    45deg,
-    #d4af37,
-    #f0c36d,
-    #f8e1a1
-  ); /* 設置線條顏色 */
+  height: 30px; /* 設置線條高度 */
+  background: #515253; /* 設置線條顏色 */
   transform: rotate(20deg); /* 旋轉成斜線的角度 */
   margin: 0 10px; /* 設置斜線的左右間距 */
+  align-self: flex-end;
 }
 
 .navbar-nav .nav-link {
-  color: #001a60; /* 預設連結顏色 */
-  font-weight: 500; /* 字體粗細 */
+  color: #515253; /* 預設連結顏色 */
+  font-weight: 600; /* 字體粗細 */
   padding-bottom: 0.3rem; /* 為下劃線預留空間 */
   position: relative; /* 為了 ::after 偽元素定位 */
   text-decoration: none; /* 移除預設下劃線 */
@@ -147,7 +147,7 @@ banner
 /* 首頁 Banner */
 .banner-homepage {
   background-size: cover; /* 背景圖片大小 */
-  height: calc(100vh - 78px); /* 設定 Banner 高度為視窗高度減去Navbar高度 */
+  height: calc(100vh - 0px); /* 設定 Banner 高度為視窗高度減去Navbar高度 */
 }
 
 /* 向下瀏覽提示 */
@@ -189,9 +189,11 @@ banner
 }
 
 /* 標題樣式 */
-.banner h1 {
+.banner .title {
   color: #ffffff; /* 文字顏色 */
+  font-size: 3rem;
   letter-spacing: 1rem; /* 調整字間距 */
+  font-weight: 800;
   z-index: 1; /* 設定顯示在最上層 */
 }
 
@@ -205,4 +207,37 @@ banner
 .banner hr {
   color: #000; /* 分隔線顏色 */
   z-index: 1; /* 設定顯示在最上層 */
+}
+
+
+/* 返回頂部按鈕樣式 */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(170, 130, 60); /* 金色圓形 */
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+  z-index: 999;
+}
+
+/* Hover 狀態 */
+.back-to-top:hover {
+  background-color: rgb(81, 82, 83); /* 深色 hover */
+}
+
+/* 顯示按鈕時的樣式 */
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
 }

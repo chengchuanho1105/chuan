@@ -32,6 +32,8 @@
      * 包括：active 標記、滾動加背景、判斷首頁或其他頁面
      */
     setupHeaderBehavior();
+    
+    setupBackToTopButton();
   } catch (err) {
     // 如果有任何錯誤，印出錯誤訊息（如網路錯誤或載入失敗）
     console.error("Layout 載入失敗：", err);
@@ -63,6 +65,17 @@ function setupHeaderBehavior() {
     }
   });
 
+  // 當頁面滾動時，為 navbar 添加或移除 .scrolled 類
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".custom-navbar");
+    if (window.scrollY > 1) {
+      // 滾動超過 50px 時觸發
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+
   const body = document.body;
   const isHomepage = currentPath === "/" || currentPath.endsWith("/index.html");
 
@@ -72,14 +85,37 @@ function setupHeaderBehavior() {
     body.classList.remove("otherpage");
 
     // 顯示首頁 Banner，隱藏其他頁面 Banner
-    document.querySelector('.banner-homepage').style.display = 'flex';
-    document.querySelector('.banner-otherpage').style.display = 'none';
+    document.querySelector(".banner-homepage").style.display = "flex";
+    document.querySelector(".banner-otherpage").style.display = "none";
   } else {
     body.classList.add("otherpage");
     body.classList.remove("homepage");
 
     // 顯示其他頁面 Banner，隱藏首頁 Banner
-    document.querySelector('.banner-homepage').style.display = 'none';
-    document.querySelector('.banner-otherpage').style.display = 'flex';
+    document.querySelector(".banner-homepage").style.display = "none";
+    document.querySelector(".banner-otherpage").style.display = "flex";
   }
+  
+}
+
+/**
+ * 控制「回到頂部」按鈕的顯示與功能
+ */
+function setupBackToTopButton() {
+  const btn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 }
