@@ -103,6 +103,8 @@ body {
 
 .mediaCard .des {
   margin: 0;
+  padding: 0px 0px 0px 1.8rem;
+  height: 4.8rem;
   font-size: 12pt;
   font-weight: 500;
   color: #2099ba;
@@ -112,6 +114,18 @@ body {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   line-clamp: 1;
+  position: relative; /* 為了 ::after 偽元素定位 */
+}
+
+.mediaCard .des::before {
+  content: "";
+  position: absolute;
+  height: 4.3rem;
+  width: 5px;
+  margin-left: 1rem;
+  left: 0;
+  transform: translateY(0.25rem); /* 水平置中 */
+  background-color: #2099ba;
 }
 
 .mediaCard .watchBtn {
