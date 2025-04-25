@@ -65,7 +65,21 @@
 
   <body class="">
     <main class="container py-3">
-
+      <!-- 媒體介紹 -->
+      <div class="my-3 p-3 bg-light">
+        <h2>媒體報導</h2>
+        <hr />
+        <div class="">
+          <!-- 動態產生嵌入 Start -->
+          <div id="media-container" class="row"></div>
+          <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+          <script src="/assets/js/embed-videos.js"></script>
+          <!-- 動態產生嵌入 End -->
+          <div class="col-12 my-1 p-4 btn btn-info btn-block text-center">
+            全部報導
+          </div>
+        </div>
+      </div>
     </main>
     <script src="/assets/js/layoutLoader.js"></script>
     <!-- Bootstrap JS -->
