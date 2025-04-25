@@ -2,13 +2,17 @@
   padding-top: 1rem; /* 上下內邊距 */
   padding-bottom: 1rem;
   transition: background-color 0.3s ease; /* 背景色過渡效果 (可選) */
-  background: linear-gradient(to bottom, rgb(251, 252, 253, 0.6), rgb(251, 252, 253, 0));
+  background: linear-gradient(
+    to bottom,
+    rgb(251, 252, 253, 0.6),
+    rgb(251, 252, 253, 0)
+  );
   transition: background-color 0.5s ease, backdrop-filter 0.5s ease;
 }
 
 .custom-navbar.scrolled {
   background: rgba(251, 252, 253, 0.5); /* 毛玻璃背景顏色 */
-  backdrop-filter: blur(5px); /* 毛玻璃效果 */
+  backdrop-filter: blur(15px); /* 毛玻璃效果 */
 }
 
 /* Navbar Brand (Logo/名稱) */
@@ -114,6 +118,12 @@
 
 /* 響應式調整 (小螢幕) */
 @media (max-width: 991.98px) {
+  
+  .custom-navbar {
+    background: rgba(251, 252, 253, 0.5); /* 毛玻璃背景顏色 */
+    backdrop-filter: blur(15px); /* 毛玻璃效果 */
+  }  
+
   .navbar-nav .nav-item {
     margin-left: 0; /* 移除左邊距 */
     text-align: center; /* 文字置中 */
