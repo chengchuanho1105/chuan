@@ -160,6 +160,7 @@ banner
   letter-spacing: 5px; /* 設定文字間距 */
   animation: bounce 1.5s infinite; /* 上下跳動的動畫效果 */
   z-index: 2; /* 確保向下提示顯示在標題與分隔線上方 */
+  user-select: none;
 }
 
 /* 向下瀏覽提示的圖示 */

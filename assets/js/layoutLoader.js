@@ -27,13 +27,9 @@
     // 把 footer 插入到 <body> 的結尾（即所有內容之後）
     document.body.insertAdjacentHTML("beforeend", footerHTML);
 
-    /**
-     * 設定 header 的互動行為
-     * 包括：active 標記、滾動加背景、判斷首頁或其他頁面
-     */
-    setupHeaderBehavior();
-    
-    setupBackToTopButton();
+    // 載入 header.js
+    await loadScript("/assets/js/header.js");
+
   } catch (err) {
     // 如果有任何錯誤，印出錯誤訊息（如網路錯誤或載入失敗）
     console.error("Layout 載入失敗：", err);
@@ -41,81 +37,14 @@
 })();
 
 /**
- * setupHeaderBehavior()
- * -------------------------------
- * 處理 header 的互動與樣式邏輯：
- * - 根據當前頁面 URL，套用 nav-link 的 active 樣式
- * - 根據路徑判斷是首頁還是其他頁面，套用對應 body 樣式（可應用於 banner、背景等）
+ * 動態載入外部 JS 檔案
  */
-function setupHeaderBehavior() {
-  const currentPath = window.location.pathname;
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  // 設定 nav active 樣式
-  navLinks.forEach((link) => {
-    const linkPath = link.getAttribute("href");
-    // 標準化 index.html
-    const normalizedCurrentPath =
-      currentPath === "/" ? "/index.html" : currentPath;
-
-    if (linkPath === normalizedCurrentPath) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-    }
-  });
-
-  // 當頁面滾動時，為 navbar 添加或移除 .scrolled 類
-  window.addEventListener("scroll", function () {
-    const navbar = document.querySelector(".custom-navbar");
-    if (window.scrollY > 1) {
-      // 滾動超過 50px 時觸發
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  });
-
-  const body = document.body;
-  const isHomepage = currentPath === "/" || currentPath.endsWith("/index.html");
-
-  // 判斷是首頁還是其他頁面，並設定對應的 body 類別
-  if (isHomepage) {
-    body.classList.add("homepage");
-    body.classList.remove("otherpage");
-
-    // 顯示首頁 Banner，隱藏其他頁面 Banner
-    document.querySelector(".banner-homepage").style.display = "flex";
-    document.querySelector(".banner-otherpage").style.display = "none";
-  } else {
-    body.classList.add("otherpage");
-    body.classList.remove("homepage");
-
-    // 顯示其他頁面 Banner，隱藏首頁 Banner
-    document.querySelector(".banner-homepage").style.display = "none";
-    document.querySelector(".banner-otherpage").style.display = "flex";
-  }
-  
-}
-
-/**
- * 控制「回到頂部」按鈕的顯示與功能
- */
-function setupBackToTopButton() {
-  const btn = document.getElementById("backToTop");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 10) {
-      btn.classList.add("show");
-    } else {
-      btn.classList.remove("show");
-    }
-  });
-
-  btn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+function loadScript(src) {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = src;
+    script.onload = resolve;
+    script.onerror = reject;
+    document.body.appendChild(script);
   });
 }
