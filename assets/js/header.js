@@ -55,10 +55,12 @@
   // 顯示對應的 banner
   const homepageBanner = document.querySelector(".banner-homepage");
   const otherpageBanner = document.querySelector(".banner-otherpage");
+  const homepageBreadcrumb = document.querySelector(".breadcrumb");
 
   if (homepageBanner && otherpageBanner) {
-    homepageBanner.style.display = isHomepage ? "flex" : "none";
-    otherpageBanner.style.display = isHomepage ? "none" : "flex";
+    homepageBanner.style.display = isHomepage ? "flex" : "none"; // home page banner
+    otherpageBanner.style.display = isHomepage ? "none" : "flex"; // other page banner
+    homepageBreadcrumb.style.display = isHomepage ? "none" : "flex"; //breadcrumb home page: none, other page: flex
   }
 })();
 

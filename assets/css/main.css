@@ -158,4 +158,16 @@ body {
 }
 
 
-/* productCard */
+/* infoContainer */
+.infoContainer {
+  position: relative; /* 設置相對定位以便分隔線可以絕對定位 */
+  display: flex; /* 使用 Flexbox */
+  justify-content: end; /* 對齊主軸線中央 */
+  align-items: center; /* 對齊交錯軸線中央 */
+  background-position: center; /* 背景圖片置中顯示 */
+  background-size: cover; /* 背景圖片大小 */
+  height: calc(100dvh - 0px); /* 設定高度為視窗高度減去Navbar高度 */
+  width: 40dvw;
+  border-bottom: 5px solid rgb(216, 172, 71);
+  padding: 2rem;
+}

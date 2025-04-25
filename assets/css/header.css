@@ -136,10 +136,8 @@ banner
 .banner {
   position: relative; /* 設置相對定位以便分隔線可以絕對定位 */
   display: flex; /* 使用 Flexbox */
-  overflow: hidden; /* 隱藏溢出的內容 */
   justify-content: center; /* 對齊主軸線中央 */
   align-items: center; /* 對齊交錯軸線中央 */
-  flex-direction: column; /* 排版方向為縱向，使標題位於分隔線上方 */
   background-image: url("/assets/media/工廠街景.png"); /* 背景圖片 */
   background-position: center; /* 背景圖片置中顯示 */
 }
@@ -147,13 +145,13 @@ banner
 /* 首頁 Banner */
 .banner-homepage {
   background-size: cover; /* 背景圖片大小 */
-  height: calc(100vh - 0px); /* 設定 Banner 高度為視窗高度減去Navbar高度 */
+  height: calc(100vh - 0px); /* 設定高度為視窗高度減去Navbar高度 */
 }
 
 /* 向下瀏覽提示 */
 .scroll-down {
   position: absolute; /* 絕對定位， */
-  bottom: 15%; /* 設置 向下瀏覽 在 Banner 底部稍微上方 */
+  bottom: 100px; /* 設置 向下瀏覽 在 Banner 底部稍微上方 */
   font-size: 1.2rem; /* 設定文字大小 */
   text-align: center; /* 設定文字水平置中 */
   color: #fafbfc; /* 設定文字顏色 */
@@ -192,9 +190,9 @@ banner
 /* 標題樣式 */
 .banner .title {
   color: #ffffff; /* 文字顏色 */
-  font-size: 3rem;
-  letter-spacing: 1rem; /* 調整字間距 */
-  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem; /* 調整字間距 */
+  font-weight: 600;
   z-index: 1; /* 設定顯示在最上層 */
 }
 
@@ -205,11 +203,9 @@ banner
   z-index: 1; /* 設定顯示在最上層 */
 }
 
-.banner hr {
-  color: #000; /* 分隔線顏色 */
-  z-index: 1; /* 設定顯示在最上層 */
+.breadcrumb {
+  display: flex;
 }
-
 
 /* 返回頂部按鈕樣式 */
 .back-to-top {
@@ -223,12 +219,12 @@ banner
   border: none;
   border-radius: 50%;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(51, 52, 53, 0.2);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, background-color 0.3s ease;
+  transition: opacity 0.5s ease, background-color 0.5s ease;
   z-index: 999;
 }
 
