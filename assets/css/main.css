@@ -157,7 +157,6 @@ body {
   font-size: 16px;
 }
 
-
 /* infoContainer */
 .infoContainer {
   position: relative; /* 設置相對定位以便分隔線可以絕對定位 */
