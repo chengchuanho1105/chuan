@@ -81,6 +81,7 @@
   });
 })();
 
+/* 
 // scroll down hint
 (function setupScrollDownHint() {
   // 取得 scroll-down 提示元素
@@ -92,3 +93,4 @@
     window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
   });
 })();
+*/
