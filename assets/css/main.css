@@ -1,9 +1,15 @@
-/* 字體設定：全站使用 Noto Sans TC 300 */
+/* 這是全局樣式，適用於整個網站 */
+/* 
+ * 
+ */
+
+
 body {
-  font-family: "Noto Sans TC", sans-serif;
-  padding-top: 0px; /* 避免被navbar遮擋 */
-  --color: #e1e1e1;
-  background-color: #f3f3f3;
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif; /* 使用 Noto Sans TC 字體 */
+  padding-top: 0px; /* 設定 padding-top 為 0px ， 避免被navbar遮擋 */
+  --color: #e1e2e3; /* 預設顏色 */
+  background-color: #f3f3f3; /* 預設背景顏色 */
   background-image: linear-gradient(
       0deg,
       transparent 24%,
@@ -32,7 +38,6 @@ body {
 }
 
 /* mediaCard */
-
 .mediaCard {
   display: flex;
   flex-direction: column;
