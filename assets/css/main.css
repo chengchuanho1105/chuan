@@ -607,9 +607,20 @@ body {
 
 /* 初始偏移位置 */
 .infobox--left {
-  transform: translateX(-100px);
+  transform: translateX(100px);
 }
 
 .infobox--right {
-  transform: translateX(100px);
+  transform: translateX(-100px);
+}
+
+/* 在較大的螢幕上才啟用初始偏移 */
+@media (max-width: 992px) { 
+  .infobox--left {
+    transform: translateX(0);
+  }
+
+  .infobox--right {
+    transform: translateX(0);
+  }
 }
