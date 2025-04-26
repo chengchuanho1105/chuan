@@ -3,7 +3,6 @@
  * 
  */
 
-
 body {
   margin: 0;
   font-family: "Noto Sans TC", sans-serif; /* 使用 Noto Sans TC 字體 */
@@ -164,13 +163,13 @@ body {
 
 /* infoContainer */
 .infoContainer {
-  position: relative; /* 設置相對定位以便分隔線可以絕對定位 */
-  display: flex; /* 使用 Flexbox */
-  justify-content: end; /* 對齊主軸線中央 */
-  align-items: center; /* 對齊交錯軸線中央 */
-  background-position: center; /* 背景圖片置中顯示 */
-  background-size: cover; /* 背景圖片大小 */
-  height: calc(100dvh - 0px); /* 設定高度為視窗高度減去Navbar高度 */
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-position: right center; /* 重點：背景靠右置中 */
+  background-size: cover;
+  height: calc(100dvh - 0px);
   width: 40dvw;
   border-bottom: 5px solid rgb(216, 172, 71);
   padding: 2rem;
@@ -518,4 +517,99 @@ body {
   100% {
     transform: translate(-100%, -100%) translate3d(0, 0, 0);
   }
+}
+
+
+/* infobox */
+.infobox {
+  display: flex;
+  border-top: 3px solid #1b3087;
+  border-bottom: 3px solid #1b3087;
+  margin: 5dvh 0;
+}
+
+.infobox--larger {
+  width: 70dvw;
+  height: 45dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafbfc;
+}
+
+.infobox--smaller {
+  width: 30dvw;
+  height: 45dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafbfc;
+}
+
+.infobox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.infobox-textcontainer {
+  padding: 1rem;
+}
+
+.infobox .infobox-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+}
+
+.infobox p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #000;
+}
+
+@media (max-width: 991.98px) {
+  .infobox {
+    flex-direction: column;
+  }
+
+  .infobox--larger {
+    width: 100%;
+    height: 50dvh;
+  }
+
+  .infobox--smaller {
+    width: 100%;
+    height: 50dvh;
+  }
+}
+
+/* infobox動畫效果 */
+.infobox--left, .infobox--right {
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 0.8s ease-out;
+}
+
+.infobox--left.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.infobox--right.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 初始偏移位置 */
+.infobox--left {
+  transform: translateX(-100px);
+}
+
+.infobox--right {
+  transform: translateX(100px);
 }
