@@ -669,10 +669,10 @@ body {
 /* 在較大的螢幕上才啟用初始偏移 */
 @media (max-width: 992px) {
   .boxflyin--left {
-    transform: translateX(0);
+    transform: translateX(-100px);
   }
 
   .boxflyin--right {
-    transform: translateX(0);
+    transform: translateX(-100px);
   }
 }
