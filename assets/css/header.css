@@ -148,7 +148,7 @@ banner
   display: flex; /* 使用 Flexbox */
   justify-content: center; /* 對齊主軸線中央 */
   align-items: center; /* 對齊交錯軸線中央 */
-  background-image: url("/assets/media/工廠街景.png"); /* 背景圖片 */
+  background-image: url("/assets/media/藏頭詩.png"); /* 背景圖片 */
   background-position: center; /* 背景圖片置中顯示 */
 }
 

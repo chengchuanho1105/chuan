@@ -3,7 +3,7 @@
  * 
  */
 
- body {
+body {
   margin: 0;
   font-family: "Noto Sans TC", sans-serif; /* 使用 Noto Sans TC 字體 */
   padding-top: 0px; /* 設定 padding-top 為 0px ， 避免被navbar遮擋 */
@@ -519,106 +519,160 @@
   }
 }
 
+/*
+      * infobox
+      * .infobox是用來顯示資訊的，包含圖片、標題和描述。
+      * .infobox的寬度可以透過類別來調整(-w**)，從10%到100%不等。
+      * .infobox Img會根據寬度自動調整大小，並且保持比例。
+      * .infobox 的 .title 和 .des會根據寬度自動換行，並且有適當的字體大小和顏色。
+      */
 
-/* infobox */
+/* infobox 區塊 */
 .infobox {
   display: flex;
+  margin: 1rem 0;
   border-top: 3px solid #1b3087;
   border-bottom: 3px solid #1b3087;
-  margin: 1rem 0;
 }
 
-.infobox--larger {
-  width: 70dvw;
-  height: 50dvh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fafbfc;
+/* infobox 寬度 */
+.infobox-w10 {
+  width: 10dvw;
 }
-
-.infobox--smaller {
+.infobox-w20 {
+  width: 20dvw;
+}
+.infobox-w30 {
   width: 30dvw;
-  height: 50dvh;
+}
+.infobox-w40 {
+  width: 40dvw;
+}
+.infobox-w50 {
+  width: 50dvw;
+}
+.infobox-w60 {
+  width: 60dvw;
+}
+.infobox-w70 {
+  width: 70dvw;
+}
+.infobox-w80 {
+  width: 80dvw;
+}
+.infobox-w90 {
+  width: 90dvw;
+}
+.infobox-w100 {
+  width: 100dvw;
+}
+
+/* infobox 內部元素 */
+.infobox-w10,
+.infobox-w20,
+.infobox-w30,
+.infobox-w40,
+.infobox-w50,
+.infobox-w60,
+.infobox-w70,
+.infobox-w80,
+.infobox-w90,
+.infobox-w100 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 49dvh;
   background-color: #fafbfc;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
 }
 
-.infobox img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 50%;
-}
-
-.infobox-textcontainer {
-  padding: 1rem;
-}
-
-.infobox .infobox-title {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #000;
+/* infobox 標題 */
+.infobox .infobox__title {
+  display: block;
   text-align: center;
-}
-
-.infobox p {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1b3087;
+  word-wrap: break-word; /* 長單字斷行 */
+  white-space: normal; /* 允許空白和換行 */
   margin: 0;
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #000;
+  padding: 0.5rem;
+  width: 100%;
 }
 
+/* infobox 描述 */
+.infobox .infobox__description {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1b3087;
+  word-wrap: break-word; /* 長單字斷行 */
+  white-space: normal; /* 允許空白和換行 */
+  margin: 0;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+/* infobox 小螢幕時寬度 */
 @media (max-width: 991.98px) {
   .infobox {
     flex-direction: column;
   }
-
-  .infobox--larger {
-    width: 100%;
-  }
-
-  .infobox--smaller {
+  .infobox-w10,
+  .infobox-w20,
+  .infobox-w30,
+  .infobox-w40,
+  .infobox-w50,
+  .infobox-w60,
+  .infobox-w70,
+  .infobox-w80,
+  .infobox-w90,
+  .infobox-w100 {
     width: 100%;
   }
 }
 
 /* infobox動畫效果 */
-.infobox--left, .infobox--right {
+.boxflyin--left,
+.boxflyin--right {
   opacity: 0;
   transform: translateX(0);
   transition: all 0.8s ease-out;
 }
 
-.infobox--left.in-view {
+.boxflyin--left.in-view {
   opacity: 1;
   transform: translateX(0);
 }
 
-.infobox--right.in-view {
+.boxflyin--right.in-view {
   opacity: 1;
   transform: translateX(0);
 }
 
 /* 初始偏移位置 */
-.infobox--left {
+.boxflyin--left {
   transform: translateX(100px);
 }
 
-.infobox--right {
+.boxflyin--right {
   transform: translateX(-100px);
 }
 
 /* 在較大的螢幕上才啟用初始偏移 */
-@media (max-width: 992px) { 
-  .infobox--left {
+@media (max-width: 992px) {
+  .boxflyin--left {
     transform: translateX(0);
   }
 
-  .infobox--right {
+  .boxflyin--right {
     transform: translateX(0);
   }
 }

@@ -35,9 +35,118 @@
   </head>
 
   <body class="">
-    <main class="">
+    <div class="infobox">
+      <div class="infobox-w70 boxflyin--left">
+        <img src="/assets/media/藏頭詩.png" alt="" />
+      </div>
+      <div class="infobox-w30 boxflyin--right">
+        <span class="infobox__title">關於我們</span>
+        <span class="infobox__description">
+          我們是由一群熱愛土地與豆製品的職人組成，秉持傳承、專業與誠信，為每位顧客帶來最天然安心的美味。<br />
+              我們的信念是在溫火中煉出豆香的純粹與真誠，讓健康的飲食在每一張豆皮中悄然發芽，陪伴客戶的生活持續醇厚延展。
+        </span>
+        <div class="btn-container">
+          <a href="/about.html" class="button type--B">
+            <div class="button__line"></div>
+            <div class="button__line"></div>
+            <span class="button__text">了解更多</span>
+            <div class="button__drow1"></div>
+            <div class="button__drow2"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="infobox">
+      <div class="infobox-w30 boxflyin--left">
+        <span class="infobox__title">精選產品</span>
+        <span class="infobox__description">
+          我們的產品是由天然食材製成，無添加任何化學成分，讓您在享受美味的同時，也能感受到健康的生活方式。<br />
+              我們的產品不僅僅是食品，更是一種生活態度，讓我們一起品味生活中的每一個瞬間。
+        </span>
+        <div class="btn-container">
+          <a href="/about.html" class="button type--B">
+            <div class="button__line"></div>
+            <div class="button__line"></div>
+            <span class="button__text">挑選產品</span>
+            <div class="button__drow1"></div>
+            <div class="button__drow2"></div>
+          </a>
+        </div>
+      </div>
+      <div class="infobox-w70 boxflyin--right">
+        <img src="/assets/media/藏頭詩.png" alt="" />
+      </div>
+    </div>
+    <div class="infobox">
+      <div class="infobox-w70 boxflyin--left">
+        <img src="/assets/media/藏頭詩.png" alt="" />
+      </div>
+      <div class="infobox-w30 boxflyin--right">
+        <span class="infobox__title">媒體介紹</span>
+        <span class="infobox__description">
+          媒體報導不僅僅是產品的介紹，更是我們對於品質與服務的承諾，讓每一位顧客都能感受到我們的用心與專業。<br />
+              我們相信，只有不斷地追求卓越，才能在競爭激烈的市場中立於不敗之地。
+        </span>
+        <div class="btn-container">
+          <a href="/about.html" class="button type--B">
+            <div class="button__line"></div>
+            <div class="button__line"></div>
+            <span class="button__text">觀看更多</span>
+            <div class="button__drow1"></div>
+            <div class="button__drow2"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="infobox">
+      <div class="infobox-w30 boxflyin--left">
+        <span class="infobox__title">客戶見證</span>
+        <span class="infobox__description">
+          客戶見證是我們最好的廣告，讓我們一起分享這些美好的故事，讓更多的人了解我們的產品與服務。<br />
+        </span>
+        <div class="btn-container">
+          <a href="/about.html" class="button type--B">
+            <div class="button__line"></div>
+            <div class="button__line"></div>
+            <span class="button__text">聯絡購買</span>
+            <div class="button__drow1"></div>
+            <div class="button__drow2"></div>
+          </a>
+        </div>
+      </div>
+      <div class="infobox-w70 boxflyin--right">
+        <img src="/assets/media/藏頭詩.png" alt="" />
+      </div>
+    </div>
+
+    <style>
       
-    </main>
+    </style>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+            } else {
+              entry.target.classList.remove("in-view");
+            }
+          });
+        },
+        {
+          threshold: 0.15, // 超過30%畫面範圍就觸發
+        }
+      );
+
+      // 監聽 infobox 內的 left 和 right
+      document
+        .querySelectorAll(".infobox .boxflyin--left, .infobox .boxflyin--right")
+        .forEach((el) => {
+          observer.observe(el);
+        });
+    </script>
+
     <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
