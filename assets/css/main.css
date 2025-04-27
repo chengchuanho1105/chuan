@@ -36,6 +36,13 @@ body {
   background-size: 55px 55px;
 }
 
+
+.blockline--TopBottom {
+  border: 3px solid rgb(216, 172, 71);
+  border-left: none;
+  border-right: none;
+}
+
 /* mediaCard */
 .mediaCard {
   display: flex;
@@ -159,20 +166,6 @@ body {
 .watchBtn:hover > .watchBtnText {
   opacity: 1;
   font-size: 16px;
-}
-
-/* infoContainer */
-.infoContainer {
-  position: relative;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  background-position: right center; /* 重點：背景靠右置中 */
-  background-size: cover;
-  height: calc(100dvh - 0px);
-  width: 40dvw;
-  border-bottom: 5px solid rgb(216, 172, 71);
-  padding: 2rem;
 }
 
 /* button */
@@ -531,8 +524,6 @@ body {
 .infobox {
   display: flex;
   margin: 1rem 0;
-  border-top: 3px solid #1b3087;
-  border-bottom: 3px solid #1b3087;
 }
 
 /* infobox 寬度 */
@@ -724,7 +715,7 @@ body {
 }
 
 .news__botton:hover {
-  color: #FAFBFC;
+  color: #fafbfc;
   border: 1px solid #39bda7;
 }
 
