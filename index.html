@@ -154,7 +154,7 @@
         </div>
       </div>
 
-      <div class="container">
+      <div class="container-fluid">
         <div class="row my-3 p-3 bg-light">
           <div class="row">
             <div class="col-12">
@@ -239,16 +239,21 @@
     </main>
 
     <script src="/assets/js/layoutLoader.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 200, // 觸發的偏移距離，讓元素提前 200px 開始動畫
+        delay: 100, // 延遲 100ms，讓不同元素的動畫有點間隔
+        duration: 1000, // 動畫持續時間 1000ms，讓元素進場看起來不急
+        easing: "ease-out", // 動畫結束時慢慢停止，讓過程更自然
+      });
+    </script>
     <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
     ></script>
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
   </body>
 </html>
