@@ -1,0 +1,14 @@
+/* base.css */
+/* 基本樣式，包含字型、顏色、排版等設定 */
+
+
+
+/* 導入 Google Noto Sans 字型 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap");
+
+body {
+  /* 字型 */
+  font-family: "Noto Sans TC", sans-serif;
+  /* 背景顏色:F1F2F3 */
+  background-color: rgb(241, 242, 243, 1);
+}

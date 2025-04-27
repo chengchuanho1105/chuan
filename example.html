@@ -11,31 +11,15 @@
       name="google-site-verification"
       content="C2aXT6B_QZYe_tRpoKGnSBUvjmJQqrQhp4Ua6tBfPio"
     />
-
-    <!-- CSS & Fonts -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-      rel="stylesheet"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="stylesheet" href="/assets/css/header.css" />
-    <link rel="stylesheet" href="/assets/css/footer.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap"
-      rel="stylesheet"
-    />
 
     <title>範例 | 源品香企業行</title>
   </head>
 
   <body class="">
+
+
 
 
     <!-- Bootstrap JS -->
@@ -46,5 +30,13 @@
     ></script>
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 150, // 觸發的偏移距離，讓元素提前 200px 開始動畫
+        delay: 100, // 延遲 100ms，讓不同元素的動畫有點間隔
+        duration: 1000, // 動畫持續時間 1000ms，讓元素進場看起來不急
+        easing: "ease-out", // 動畫結束時慢慢停止，讓過程更自然
+      });
+    </script>
   </body>
 </html>
