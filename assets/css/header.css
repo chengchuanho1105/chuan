@@ -148,13 +148,14 @@ banner
   display: flex; /* 使用 Flexbox */
   justify-content: center; /* 對齊主軸線中央 */
   align-items: center; /* 對齊交錯軸線中央 */
-  background-image: url("/assets/media/藏頭詩.png"); /* 背景圖片 */
+  background-image: url("/assets/media/世界地圖.png"); /* 背景圖片 */
   background-position: center; /* 背景圖片置中顯示 */
 }
 
 /* 首頁 Banner */
 .banner-homepage {
   background-size: cover; /* 背景圖片大小 */
+  background-position: 33% center;
   height: calc(100vh - 0px); /* 設定高度為視窗高度減去Navbar高度 */
 }
 
@@ -192,17 +193,18 @@ banner
 
 /* 其他頁面 Banner */
 .banner-otherpage {
-  background-size: 100dvw 30dvh; /* 背景圖片大小 */
   height: 30dvh; /* Banner 高度 */
+  background-size: cover; /* 背景圖片大小 */
+  background-position: 33% center;
   justify-items: center;
 }
 
 /* 標題樣式 */
 .banner .title {
-  color: #ffffff; /* 文字顏色 */
+  color: #0A0B0C; /* 文字顏色 */
   font-size: 1.5rem;
   letter-spacing: 0.5rem; /* 調整字間距 */
-  font-weight: 600;
+  line-height: 1.5rem;
   z-index: 1; /* 設定顯示在最上層 */
 }
 
