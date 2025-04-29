@@ -283,14 +283,14 @@
 */
 
 /* ========== B. 卡片樣式目錄 ==========
- * 001. 分類卡片01
+ * 001. 帶縮移入縮效果的卡片0101
  * 002. 資訊卡片01
  * 003. 
  * 004. 
  * 005. 
 */
 
-/* 001. 分類卡片01 */
+/* 001. 帶縮移入縮效果的卡片01 */
 .category-card {
   text-align: center;
   border: rgb(51, 52, 53, 0.3) 1px solid;
@@ -308,7 +308,7 @@
 }
 
 .category-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(51, 52, 53, 0.1);
 }
 
