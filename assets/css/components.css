@@ -4,15 +4,15 @@
 /* ========== 所有樣式目錄 ==========
  * A. 按鈕樣式目錄
  * B. 卡片樣式目錄
- * C. 
+ * C. 分隔線樣式目錄
  * D. 
  * E. 
  * F. 
 */
 
 /* ========== A. 按鈕樣式目錄 ==========
- * 001. 神來一筆按鈕
- * 002. 從中間下方往上展開
+ * 001. 神來一筆按鈕 (use at: home page info card view more buttom)
+ * 002. 從中間下方往上展開(usse at: home page news buttom )
  * 003. 
  * 004. 
  * 005. 
@@ -283,9 +283,9 @@
 */
 
 /* ========== B. 卡片樣式目錄 ==========
- * 001. 帶縮移入縮效果的卡片0101
- * 002. 資訊卡片01
- * 003. 
+ * 001. 帶縮移入縮效果的卡片01 (use at: product list page)
+ * 002. 資訊卡片01 (use at: home page info)
+ * 003. 影片卡片01 (use at: media page youtube iframe)
  * 004. 
  * 005. 
 */
@@ -421,5 +421,23 @@
   .infobox-w100 {
     width: 100%;
   }
+}
+
+/* 003. 影片卡片01 */
+
+
+/* 分隔線樣式目錄
+ * 001. 分隔線01--上下3px solod
+ * 002. 
+ * 003. 
+ * 004.
+ * 005.
+*/
+
+/* 001. 分隔線01--上下 */
+.blockline--TopBottom {
+  border: 3px, solid, rgb(216, 172, 71);
+  border-left: none;
+  border-right: none;
 }
 

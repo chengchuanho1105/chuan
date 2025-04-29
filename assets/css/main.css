@@ -19,15 +19,6 @@
 /* 導入第三方庫樣式 */
 @import url("/assets/css/vender.css");
 
-
-
-
-.blockline--TopBottom {
-  border: 3px solid rgb(216, 172, 71);
-  border-left: none;
-  border-right: none;
-}
-
 /* mediaCard */
 .mediaCard {
   display: flex;
@@ -153,9 +144,6 @@
   font-size: 16px;
 }
 
-
-
-
 /*
       * infobox
       * .infobox是用來顯示資訊的，包含圖片、標題和描述。
@@ -163,10 +151,6 @@
       * .infobox Img會根據寬度自動調整大小，並且保持比例。
       * .infobox 的 .title 和 .des會根據寬度自動換行，並且有適當的字體大小和顏色。
       */
-
-
-
-
 
 /* news__botton */
 .news__botton {

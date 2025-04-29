@@ -7,8 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap");
 
 body {
-  /* 字型 */
   font-family: "Noto Sans TC", sans-serif;
-  /* 背景顏色:F1F2F3 */
+  color: rgb(51, 52, 53, 1);
   background-color: rgb(241, 242, 243, 1);
 }
