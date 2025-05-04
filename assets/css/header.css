@@ -118,11 +118,10 @@
 
 /* 響應式調整 (小螢幕) */
 @media (max-width: 991.98px) {
-  
   .custom-navbar {
     background: rgba(251, 252, 253, 0.5); /* 毛玻璃背景顏色 */
     backdrop-filter: blur(15px); /* 毛玻璃效果 */
-  }  
+  }
 
   .navbar-nav .nav-item {
     margin-left: 0; /* 移除左邊距 */
@@ -201,7 +200,7 @@ banner
 
 /* 標題樣式 */
 .banner .title {
-  color: #0A0B0C; /* 文字顏色 */
+  color: #0a0b0c; /* 文字顏色 */
   font-size: 1.5rem;
   letter-spacing: 0.5rem; /* 調整字間距 */
   line-height: 1.5rem;
