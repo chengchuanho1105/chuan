@@ -1,10 +1,17 @@
 /* base.css */
 /* 基本樣式，包含字型、顏色、排版等設定 */
 
-
-
 /* 導入 Google Noto Sans 字型 */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap");
+
+/* 導入 woff2 字型 */
+@font-face {
+  font-family: masafont-Regular;
+  src: url(https://cdn.jsdelivr.net/gh/max32002/masafont@2.1/webfont/MasaFont-Regular.woff2)
+      format("woff2"),
+    url(https://cdn.jsdelivr.net/gh/max32002/masafont@2.1/webfont/MasaFont-Regular.woff)
+      format("woff");
+}
 
 body {
   font-family: "Noto Sans TC", sans-serif;
