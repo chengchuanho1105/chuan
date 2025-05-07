@@ -29,7 +29,6 @@
 
     // 載入 header.js
     await loadScript("/assets/js/header.js");
-
   } catch (err) {
     // 如果有任何錯誤，印出錯誤訊息（如網路錯誤或載入失敗）
     console.error("Layout 載入失敗：", err);

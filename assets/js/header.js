@@ -62,6 +62,9 @@
     otherpageBanner.style.display = isHomepage ? "none" : "flex"; // other page banner
     homepageBreadcrumb.style.display = isHomepage ? "none" : "flex"; //breadcrumb home page: none, other page: flex
   }
+
+  
+  
 })();
 
 // back-to-top button
