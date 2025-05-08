@@ -6,12 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
     header: true,
     complete: function (results) {
       results.data.forEach((item) => {
+        /*
         const videoId = extractYouTubeId(item.URL);
         if (!videoId) return;
+        */
 
         // 外層 col
         const wrapper = document.createElement("div");
-        wrapper.classList.add("col-sm-12", "col-lg-6", "col-xl-4", "my-2", "p-1");
+        wrapper.classList.add("col-sm-12", "col-lg-6", "my-2", "p-1");
 
         // 卡片 HTML
         wrapper.innerHTML = `
@@ -20,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube-nocookie.com/embed/${videoId}"
+                src="${item.URL}"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
@@ -36,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+  /*
   function extractYouTubeId(url) {
     try {
       const u = new URL(url);
@@ -59,4 +62,5 @@ document.addEventListener("DOMContentLoaded", function () {
       return null;
     }
   }
+  */
 });
