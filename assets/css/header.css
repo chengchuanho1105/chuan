@@ -15,7 +15,7 @@
 .custom-navbar.scrolled {
   /*top: -80px;*/ /* 或是設定比 navbar 高一點的值 */
   background: rgba(251, 252, 253, 0.5); /* 毛玻璃背景顏色 */
-  backdrop-filter: blur(15px); /* 毛玻璃效果 */*/
+  backdrop-filter: blur(15px); /* 毛玻璃效果 */
 }
 
 /* Navbar Brand (Logo/名稱) */
